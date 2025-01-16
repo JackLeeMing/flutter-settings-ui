@@ -3,6 +3,7 @@ import 'package:settings_ui/settings_ui.dart';
 
 class AndroidSettingsTile extends StatelessWidget {
   const AndroidSettingsTile({
+    super.key,
     required this.tileType,
     required this.leading,
     required this.title,
@@ -14,8 +15,7 @@ class AndroidSettingsTile extends StatelessWidget {
     required this.activeSwitchColor,
     required this.enabled,
     required this.trailing,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final SettingsTileType tileType;
   final Widget? leading;

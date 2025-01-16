@@ -10,6 +10,7 @@ enum SettingsTileType { simpleTile, switchTile, navigationTile }
 
 class SettingsTile extends AbstractSettingsTile {
   SettingsTile({
+    super.key,
     this.leading,
     this.trailing,
     this.value,
@@ -17,8 +18,7 @@ class SettingsTile extends AbstractSettingsTile {
     this.description,
     this.onPressed,
     this.enabled = true,
-    Key? key,
-  }) : super(key: key) {
+  }) : super() {
     onToggle = null;
     initialValue = null;
     activeSwitchColor = null;
@@ -26,6 +26,7 @@ class SettingsTile extends AbstractSettingsTile {
   }
 
   SettingsTile.navigation({
+    super.key,
     this.leading,
     this.trailing,
     this.value,
@@ -33,8 +34,7 @@ class SettingsTile extends AbstractSettingsTile {
     this.description,
     this.onPressed,
     this.enabled = true,
-    Key? key,
-  }) : super(key: key) {
+  }) : super() {
     onToggle = null;
     initialValue = null;
     activeSwitchColor = null;
@@ -42,6 +42,7 @@ class SettingsTile extends AbstractSettingsTile {
   }
 
   SettingsTile.switchTile({
+    super.key,
     required this.initialValue,
     required this.onToggle,
     this.activeSwitchColor,
@@ -51,8 +52,7 @@ class SettingsTile extends AbstractSettingsTile {
     this.description,
     this.onPressed,
     this.enabled = true,
-    Key? key,
-  }) : super(key: key) {
+  }) : super() {
     value = null;
     tileType = SettingsTileType.switchTile;
   }

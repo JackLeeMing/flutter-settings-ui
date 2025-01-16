@@ -9,11 +9,11 @@ import 'package:settings_ui/src/utils/settings_theme.dart';
 
 class SettingsSection extends AbstractSettingsSection {
   const SettingsSection({
+    super.key,
     required this.tiles,
     this.margin,
     this.title,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final List<AbstractSettingsTile> tiles;
   final EdgeInsetsDirectional? margin;

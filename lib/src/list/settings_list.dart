@@ -19,6 +19,7 @@ enum ApplicationType {
 
 class SettingsList extends StatelessWidget {
   const SettingsList({
+    super.key,
     required this.sections,
     this.shrinkWrap = false,
     this.physics,
@@ -28,8 +29,7 @@ class SettingsList extends StatelessWidget {
     this.brightness,
     this.contentPadding,
     this.applicationType = ApplicationType.material,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final bool shrinkWrap;
   final ScrollPhysics? physics;
@@ -96,10 +96,6 @@ class SettingsList extends StatelessWidget {
           throw Exception(
             'You can\'t use the DevicePlatform.device in this context. '
             'Incorrect platform: SettingsList.calculateDefaultPadding',
-          );
-        default:
-          return EdgeInsets.symmetric(
-            horizontal: padding,
           );
       }
     }

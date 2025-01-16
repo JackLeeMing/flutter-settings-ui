@@ -4,6 +4,7 @@ import 'package:settings_ui/settings_ui.dart';
 
 class IOSSettingsTile extends StatefulWidget {
   const IOSSettingsTile({
+    super.key,
     required this.tileType,
     required this.leading,
     required this.title,
@@ -15,8 +16,7 @@ class IOSSettingsTile extends StatefulWidget {
     required this.activeSwitchColor,
     required this.enabled,
     required this.trailing,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final SettingsTileType tileType;
   final Widget? leading;

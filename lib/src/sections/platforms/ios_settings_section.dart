@@ -7,8 +7,8 @@ class IOSSettingsSection extends StatelessWidget {
     required this.tiles,
     required this.margin,
     required this.title,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final List<AbstractSettingsTile> tiles;
   final EdgeInsetsDirectional? margin;

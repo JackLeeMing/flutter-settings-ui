@@ -4,11 +4,11 @@ import 'package:settings_ui/src/utils/settings_theme.dart';
 
 class AndroidSettingsSection extends StatelessWidget {
   const AndroidSettingsSection({
+    super.key,
     required this.tiles,
     required this.margin,
     this.title,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final List<AbstractSettingsTile> tiles;
   final EdgeInsetsDirectional? margin;

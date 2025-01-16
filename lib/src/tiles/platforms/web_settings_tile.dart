@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:settings_ui/settings_ui.dart';
 
 class WebSettingsTile extends StatelessWidget {
   const WebSettingsTile({
+    super.key,
     required this.tileType,
     required this.leading,
     required this.title,
@@ -15,8 +15,7 @@ class WebSettingsTile extends StatelessWidget {
     required this.activeSwitchColor,
     required this.enabled,
     required this.trailing,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final SettingsTileType tileType;
   final Widget? leading;
